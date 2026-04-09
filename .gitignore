@@ -1,2 +1,19 @@
 *.csv
 *.zip
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and OS files
+.DS_Store
+.ipynb_checkpoints/
+.vscode/
+.idea/

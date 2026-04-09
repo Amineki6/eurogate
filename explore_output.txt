@@ -1,0 +1,118 @@
+Loading data...
+==== BASIC INFO ====
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 3774557 entries, 0 to 3774556
+Data columns (total 14 columns):
+ #   Column                Dtype  
+---  ------                -----  
+ 0   container_visit_uuid  object 
+ 1   customer_uuid         object 
+ 2   container_uuid        object 
+ 3   HardwareType          object 
+ 4   EventTime             object 
+ 5   AvPowerCons           float64
+ 6   TtlEnergyConsHour     float64
+ 7   TtlEnergyCons         float64
+ 8   TemperatureSetPoint   float64
+ 9   TemperatureAmbient    float64
+ 10  TemperatureReturn     float64
+ 11  RemperatureSupply     float64
+ 12  ContainerSize         float64
+ 13  stack_tier            float64
+dtypes: float64(9), object(5)
+memory usage: 1.7 GB
+None
+
+==== MISSING VALUES ====
+container_visit_uuid        0
+customer_uuid              11
+container_uuid              0
+HardwareType                0
+EventTime                   0
+AvPowerCons                 0
+TtlEnergyConsHour           0
+TtlEnergyCons               0
+TemperatureSetPoint         0
+TemperatureAmbient          0
+TemperatureReturn           0
+RemperatureSupply           0
+ContainerSize            1994
+stack_tier              12471
+dtype: int64
+
+==== DESCRIPTIVE STATISTICS ====
+                         count           mean  ...            75%           max
+AvPowerCons          3774557.0    2375.014505  ...    3180.767582  1.413273e+04
+TtlEnergyConsHour    3774557.0    2368.592038  ...    3130.793424  1.942872e+06
+TtlEnergyCons        3774557.0  233903.564959  ...  270119.743659  1.683930e+07
+TemperatureSetPoint  3774557.0      -0.077466  ...      15.000000  3.000000e+01
+TemperatureAmbient   3774557.0      12.901795  ...      18.375000  7.480000e+01
+TemperatureReturn    3774557.0       0.282146  ...      15.025000  4.933333e+01
+RemperatureSupply    3774557.0      -0.767316  ...      15.100000  4.966667e+01
+ContainerSize        3772563.0      38.782256  ...      40.000000  4.500000e+01
+stack_tier           3762086.0       1.747369  ...       2.000000  3.000000e+00
+
+[9 rows x 8 columns]
+
+==== UNIQUE VALUES ====
+
+HardwareType unique values:
+HardwareType
+SCC6          1567014
+ML3            949395
+DecosVb        298827
+DecosVa        284520
+DecosIIIj      224217
+MP4000         183207
+ML5             96871
+DecosIIIh       65362
+DecosIIIg       63490
+MP3000A         21822
+ML2i             8756
+RCCU5            4508
+DecosIIId        4002
+DecosIIIe        1645
+DecosIIIf         459
+MPC2000           224
+DecosIIIc         175
+DecosIIId1         57
+MPC2000ID           6
+Name: count, dtype: int64
+
+ContainerSize unique values:
+ContainerSize
+40.0    3540811
+20.0     230111
+45.0       1641
+Name: count, dtype: int64
+
+stack_tier unique values:
+stack_tier
+1.0    1754239
+2.0    1204029
+3.0     803818
+Name: count, dtype: int64
+
+==== TIME RANGE ====
+Min time: 2025-01-01 00:00:00
+Max time: 2026-01-10 06:00:00
+
+==== GROUP BY TIME (Aggregating Power) ====
+Total hourly records: 8403
+Average total hourly power: 1066836.5611606538
+Max total hourly power: 2111213.572864134
+Min total hourly power: 25181.238208912495
+
+==== CORRELATIONS (Numeric) ====
+                     AvPowerCons  TtlEnergyConsHour  ...  ContainerSize  stack_tier
+AvPowerCons             1.000000           0.679618  ...       0.007170    0.024951
+TtlEnergyConsHour       0.679618           1.000000  ...       0.005510    0.015902
+TtlEnergyCons           0.298388           0.209359  ...       0.015609   -0.088523
+TemperatureSetPoint     0.002804           0.001328  ...      -0.063110   -0.056748
+TemperatureAmbient      0.156325           0.105726  ...      -0.018475    0.007692
+TemperatureReturn       0.022538           0.014369  ...      -0.061900   -0.055441
+RemperatureSupply       0.008969           0.005198  ...      -0.062998   -0.055957
+ContainerSize           0.007170           0.005510  ...       1.000000    0.110535
+stack_tier              0.024951           0.015902  ...       0.110535    1.000000
+
+[9 rows x 9 columns]
